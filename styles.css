@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e6e6fa; /* Lavender background */
-    color: #333;
+    background-color: #f2f2f2; /* Light Gray background */
+    color: #333333; /* Dark Gray text color */
 }
 .container {
     max-width: 1200px;
@@ -13,7 +13,7 @@ body {
 }
 /* Header styles */
 header {
-    background-color: #1dbf73;
+    background-color: #007991; /* Teal Blue */
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -23,7 +23,7 @@ header h1 {
 }
 /* Navigation styles */
 nav {
-    background-color: #1dbf73; /* Change background color */
+    background-color: #007991; /* Teal Blue */
     color: #fff;
     padding: 10px 0;
     text-align: center;
@@ -64,7 +64,7 @@ nav .container {
     .menu {
         display: none;
         flex-direction: column;
-        background-color: #1dbf73;
+        background-color: #007991; /* Teal Blue */
         position: absolute;
         top: 60px;
         left: 0;
@@ -89,7 +89,7 @@ nav .container {
 .section-title {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333;
+    color: #333333; /* Dark Gray text color */
 }
 .service {
     background-color: #fff;
@@ -100,13 +100,13 @@ nav .container {
 }
 .service h3 {
     margin-top: 0;
-    color: #1dbf73;
+    color: #007991; /* Teal Blue */
 }
 .service p {
     margin-bottom: 0;
 }
 .service-button {
-    background-color: #1dbf73;
+    background-color: #007991; /* Teal Blue */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -116,10 +116,10 @@ nav .container {
     transition: background-color 0.3s;
 }
 .service-button:hover {
-    background-color: #0e9e5f;
+    background-color: #005e66; /* Darker shade of Teal Blue for hover */
 }
 .testimonial {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -130,7 +130,7 @@ nav .container {
 }
 .testimonial-author {
     font-style: italic;
-    color: #555;
+    color: #555555; /* Dark Gray text color */
 }
 .how-it-works-step {
     display: flex;
@@ -190,7 +190,7 @@ nav .container {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #1dbf73;
+    background-color: #007991; /* Teal Blue */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -199,14 +199,14 @@ nav .container {
     transition: background-color 0.3s;
 }
 .subscribe-form button[type="submit"]:hover {
-    background-color: #0e9e5f;
+    background-color: #005e66; /* Darker shade of Teal Blue for hover */
 }
 .post-gig-button {
     display: block;
     width: 200px;
     margin: 20px auto;
     padding: 15px 20px;
-    background-color: #1dbf73;
+    background-color: #007991; /* Teal Blue */
     color: #fff;
     text-align: center;
     text-decoration: none;
@@ -216,17 +216,17 @@ nav .container {
     transition: background-color 0.3s;
 }
 .post-gig-button:hover {
-    background-color: #0e9e5f;
+    background-color: #005e66; /* Darker shade of Teal Blue for hover */
 }
 .about-us {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
 .contact {
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
