@@ -84,8 +84,19 @@
         </div>
     </header>
     <div class="container">
+        <?php
+            if (isset($_POST["submit"])) {
+                $email = $_POST["gigTitle"];
+                $password = $_POST["gigDescription"];
+                if ($email) {
+                    echo "<div class='alert alert-danger'>Password does not match</div>";
+                }else{
+                    echo "<div class='alert alert-danger'>Email does not match</div>";
+                }
+            }
+        ?>
         <!-- Gig creation form -->
-        <form>
+        <form method="post">
             <label for="gigTitle">Gig Title:</label><br>
             <input type="text" id="gigTitle" name="gigTitle"><br><br>
             <label for="gigDescription">Gig Description:</label><br>

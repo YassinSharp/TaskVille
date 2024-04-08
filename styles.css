@@ -1,238 +1,106 @@
-/* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2; /* Light Gray background */
-    color: #333333; /* Dark Gray text color */
+    padding-top: 80px;
+    background-color: #f7f7f7;
+    color: #333;
 }
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+
+a {
+    color: #333;
 }
-/* Header styles */
-header {
-    background-color: #007991; /* Teal Blue */
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-header h1 {
-    margin: 0;
-}
-/* Navigation styles */
-nav {
-    background-color: #007991; /* Teal Blue */
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-nav .container {
-    display: flex; /* Make container flex */
-    align-items: center;
-    justify-content: space-between;
-}
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-.menu-toggle {
-    display: none; /* Hide menu toggle by default */
-    font-size: 1.5em;
-    cursor: pointer;
-}
-.menu {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-.menu li {
-    margin-right: 20px;
-}
-.menu li:last-child {
-    margin-right: 0;
-}
-.menu a {
-    color: #fff;
+
+a:hover {
     text-decoration: none;
-    font-weight: bold;
 }
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        background-color: #007991; /* Teal Blue */
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-    }
-    .menu li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-    .menu-toggle {
-        display: block; /* Show menu toggle for smaller screens */
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
+
+.underline-on-hover:hover {
+    text-decoration: underline;
 }
-/* Additional styles specific to this page */
-.section {
-    margin-bottom: 50px;
-}
-.section-title {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333333; /* Dark Gray text color */
-}
-.service {
+
+.navbar-default {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-color: #ddd;
+}
+
+.navbar-default .navbar-brand {
+    color: #333;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #333;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #333;
+}
+
+.gig {
+    position: relative;
+    overflow: hidden;
+    height: 300px; /* Set a fixed height for all gigs */
     margin-bottom: 20px;
 }
-.service h3 {
-    margin-top: 0;
-    color: #007991; /* Teal Blue */
-}
-.service p {
-    margin-bottom: 0;
-}
-.service-button {
-    background-color: #007991; /* Teal Blue */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-.service-button:hover {
-    background-color: #005e66; /* Darker shade of Teal Blue for hover */
-}
-.testimonial {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-.testimonial p {
-    margin-bottom: 10px;
-}
-.testimonial-author {
-    font-style: italic;
-    color: #555555; /* Dark Gray text color */
-}
-.how-it-works-step {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.how-it-works-step img {
-    width: 100px;
-    margin-right: 20px;
-}
-.how-it-works-step-content {
-    flex: 1;
-}
-.how-it-works-step-content h3 {
-    margin-top: 0;
-}
-.how-it-works-step-content p {
-    margin-bottom: 10px;
-}
-.featured-freelancer {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-}
-.featured-freelancer img {
-    width: 100px;
-    margin-right: 20px;
-    border-radius: 50%;
-}
-.featured-freelancer-info {
-    flex: 1;
-}
-.featured-freelancer-info h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-.featured-freelancer-info p {
-    margin-bottom: 0;
-}
-.subscribe-form {
-    max-width: 400px;
-    margin: 0 auto;
-}
-.subscribe-form input[type="email"] {
+
+.gig img {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensure images cover the entire area */
+    transition: opacity 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.gig::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.gig:hover::before {
+    opacity: 1; /* Show the overlay on hover */
+}
+
+.gig .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Make background transparent */
+    color: #fff;
+    padding: 20px;
     box-sizing: border-box;
-}
-.subscribe-form button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #007991; /* Teal Blue */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-.subscribe-form button[type="submit"]:hover {
-    background-color: #005e66; /* Darker shade of Teal Blue for hover */
-}
-.post-gig-button {
-    display: block;
-    width: 200px;
-    margin: 20px auto;
-    padding: 15px 20px;
-    background-color: #007991; /* Teal Blue */
-    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
     text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s;
 }
-.post-gig-button:hover {
-    background-color: #005e66; /* Darker shade of Teal Blue for hover */
+
+.gig:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
 }
-.about-us {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+
+.gig .overlay h3,
+.gig .overlay p {
+    margin: 0;
 }
-.contact {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+
+.gig .overlay p {
+    margin-top: 10px;
 }
-/* Add new styles for additional elements */
-.contact p {
-    margin-bottom: 5px;
+
+.gig img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Ensure images cover the entire area */
+    transition: opacity 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.gig:hover img {
+    opacity: 0.7; /* Reduce opacity on hover */
+    transform: scale(1.1); /* Zoom in the image on hover */
 }
