@@ -38,14 +38,7 @@ a:hover {
     overflow: hidden;
     height: 300px; /* Set a fixed height for all gigs */
     margin-bottom: 20px;
-}
-
-.gig img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover; /* Ensure images cover the entire area */
-    transition: opacity 0.3s, transform 0.3s; /* Added transform transition */
+    border-radius: 10px; /* Add border radius */
 }
 
 .gig::before {
@@ -58,11 +51,7 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0; /* Initially invisible */
     transition: opacity 0.3s;
-    cursor: pointer;
-}
-
-.gig:hover::before {
-    opacity: 1; /* Show the overlay on hover */
+    border-radius: 10px; /* Add border radius */
 }
 
 .gig .overlay {
@@ -77,10 +66,14 @@ a:hover {
     opacity: 0;
     transition: opacity 0.3s;
     text-align: center;
+    border-radius: 10px; /* Add border radius */
 }
-
+.gig:hover::before {
+    opacity: 1; /* Show the overlay on hover */
+}
 .gig:hover .overlay {
     opacity: 1; /* Show the overlay on hover */
+    cursor: pointer;
 }
 
 .gig .overlay h3,
@@ -98,9 +91,35 @@ a:hover {
     display: block;
     object-fit: cover; /* Ensure images cover the entire area */
     transition: opacity 0.3s, transform 0.3s; /* Added transform transition */
+    cursor: pointer;
+    border-radius: 10px;
 }
-
 .gig:hover img {
     opacity: 0.7; /* Reduce opacity on hover */
     transform: scale(1.1); /* Zoom in the image on hover */
+    border-radius: 10px;
+}
+.banner-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+}
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 24px;     
+}
+
+@media (max-width: 767px) {
+    .banner-text {
+        font-size: 18px;
+    }
 }
